@@ -39,7 +39,7 @@ int main() {
   cl_args.exit_signal = SIGCHLD;
   pid_t pid = syscall(SYS_clone3, &cl_args, sizeof(cl_args));
   if (pid < 0) {
-    perror("[Host] Error al ejecutar clone3. ¿Eres root?");
+    perror("[Host] Clone 3 error, are you root? try sudo!");
     return 1;
   }
 
